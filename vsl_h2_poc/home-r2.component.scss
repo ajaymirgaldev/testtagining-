@@ -1,0 +1,174 @@
+$button-sprite-path: "assets/images/all_buttons_without_outlines.png";
+.floating_container{
+    pointer-events: none;
+}
+.working-area{
+    display: none;
+}
+.main{
+    border: 1px solid red;
+}
+.home-r2{
+    --x:0px;
+    --y:0px;
+    width: 3840px;
+    height: 1440px;//100%;
+    // border: 1px solid red;
+    display: flex;
+    background-image:url(assets/images/journey/Forest_seamless.jpg);
+    background-size: 3840px 1440px;
+    background-repeat: repeat-x repeat-y; 
+    background-position: 0px 0px;
+    z-index: 1000;
+    position: absolute !important;
+    left: var(--x);
+}
+.scroll-wrapper {
+    position: absolute;
+    text-align: center;
+    .description {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        margin-bottom: -30px;
+        visibility: hidden;
+        p {
+            position: absolute;
+            bottom: 0;
+            margin: 0;
+            font-size: 33pt;
+            font-weight: bold;
+            color: #6e3429;
+            font-family: 'VAGRoundedBT';
+            // @include text-stroke(3, #fff);
+        }
+    }
+    .scroll {
+        background-image: url($button-sprite-path);
+        background-repeat: no-repeat;
+        width: 165px;
+        height: 165px;
+        margin: 0 auto;
+        pointer-events: all;
+        cursor: pointer;
+    }
+    &.completed {
+        .icon {
+            background-position: -162px -1147px;
+        }
+        .rating {
+            background-image: url($button-sprite-path);
+            background-repeat: no-repeat;
+            width: 56px;
+            height: 60px;
+            &.active-star,
+            &.deactive-star {
+                position: absolute;
+                &.first {
+                    top: 280px;
+                    left: 50%;
+                    transform: translate(-110%, -50%);
+                }
+                &.middle {
+                    top: 295px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &.last {
+                    top: 280px;
+                    left: 50%;
+                    transform: translate(20%, -50%);
+                }
+            }
+            &.active-star {
+                background-position: -883px -745px;
+            }
+            &.deactive-star {
+                background-position: -940px -745px;
+            }
+        }
+    }
+    &.current {
+        .icon {
+            background-position: 0 -1147px;
+            ;
+        }
+    }
+    &.not-started {
+        p {
+            opacity: 0.8;
+        }
+        .icon {
+            background-position: -325px -1147px;
+        }
+    }
+    &.scroll-1 {
+        top: 700px;
+        left: 0px;
+    }
+    &.scroll-3 {
+        top: 370px;
+        left: 470px;
+    }
+    &.scroll-2 {
+        top: 627px;
+        left: 323px;
+    }
+    &.scroll-4 {
+        top: 490px;
+        left: 790px;
+    }
+    &.scroll-5 {
+        top: 530px;
+        left: 1290px;
+    }
+    &.scroll-6 {
+        top: 250px;
+        left: 1326px;
+    }
+    &.scroll-7 {
+        top: 100px;
+        left: 1650px;
+    }
+    &.scroll-8 {
+        top: 140px;
+        left: 1920px;
+    }
+    &.scroll-9 {
+        top: 180px;
+        left: 2190px;
+    }
+    &.scroll-10 {
+        top: 141px;
+        left: 2461px;
+    }
+    &.scroll-11 {
+        top: 220px;
+        left: 2700px;
+    }
+    &.scroll-12 {
+        top: 420px;
+        left: 2840px;
+    }
+    &.scroll-13 {
+        top: 580px;
+        left: 3020px;
+    }
+    &.scroll-14 {
+        top: 760px;
+        left: 3047px;
+    }
+    &.scroll-15 {
+        top: 631px;
+        left: 1071px;
+    }
+    &.scroll-16 {
+        display: none;
+        top: 430px;
+        left: 2710px;
+    }
+    &.scroll-17 {
+        top: 900px;
+        left: 3170px;
+    }
+}
